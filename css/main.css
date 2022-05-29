@@ -1,0 +1,599 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Just because */
+@import url("./defaultChrome.css") section;
+
+section {
+    margin: 8px ;
+    padding: unset;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: unset;
+    /* margin-top: 50px; */
+}
+
+nav {
+    font-family: cursive;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav li {
+    list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: teal;
+    color: #fff;
+    padding-right: 20px;
+    padding-left: 20px
+}
+
+nav .nav-links a {
+    color: #fff;
+}
+
+/* LOGO */
+nav .logo {
+    font-size: 32px;
+}
+
+/* NAVBAR MENU */
+nav .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+nav .menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+nav .menu li {
+    padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+nav .services {
+    position: relative;
+}
+
+nav .dropdown {
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute;
+    /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+
+nav .dropdown li+li {
+    margin-top: 10px;
+}
+
+nav .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+
+nav .dropdown li:hover {
+    background-color: #4c9e9e;
+}
+
+nav .services:hover .dropdown {
+    display: block;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+nav input[type=checkbox] {
+    display: none;
+}
+
+/*HAMBURGER MENU*/
+nav .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    nav .menu {
+        display: none;
+        position: absolute;
+        background-color: teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    nav .menu li:hover {
+        display: inline-block;
+        background-color: #4c9e9e;
+        transition: 0.3s ease;
+    }
+
+    nav .menu li+li {
+        margin-top: 12px;
+    }
+
+    nav input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+
+    nav .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+    nav .dropdown li:hover {
+        background-color: #4c9e9e;
+    }
+}
+
+
+/* make "section" fade in */
+section {
+    animation: fadeIn linear 0.5s;
+    -webkit-animation: fadeIn linear 0.5s;
+    -moz-animation: fadeIn linear 0.5s;
+    -o-animation: fadeIn linear 0.5s;
+    -ms-animation: fadeIn linear 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* CART */
+
+.cart-item-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+/* Products */
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    
+}
+
+.product {
+    width: 20%;
+    margin: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    transition: 0.3s ease;
+    color: #333;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+
+}
+.product h2:hover {
+    color: #4c9e9e;
+    font-size: 1.4em;
+    transition: 0.4s ease;
+}
+
+.product-buttons button, .products-cart button {
+    background-color: #4c9e9e;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    bottom: 0 ;
+    align-self: stretch;
+    justify-content: flex-end
+
+}
+
+.product-info,
+.product-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;    
+}
+.product-buttons,
+.cart-item-buttons {
+    bottom: 0;
+}
+
+.product button:hover,
+.products-cart button:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+
+}
+.product button:disabled,
+.products-cart button:disabled {
+    background-color: #ccc;
+    color: #333;
+}
+
+.product-stats {
+    padding-bottom: 20px;
+    color: grey;
+    font-size: 0.9em;
+}
+li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 0 10px;
+    line-height: 1.5em;
+
+    
+}
+
+.product-stats li:not(:last-child):after {
+    /* make content a dot */
+    content: "•";
+}
+
+li::after {
+    font-size: 1em;
+    padding: 0 5px;
+}
+
+.product-stats strong {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.product-stats li:hover strong {
+    transition: 0.3s ease;
+    font-size: 1.3em ;
+
+}
+.product-stats li strong.not {
+    font-size: 1.2em ;
+    font-weight: normal;
+}
+.product-stats li:hover strong.not {
+    font-size: 1.3em ;
+    font-weight: normal;
+}
+
+/* flexbox unless size is too small */
+.product:hover {
+    box-shadow: 0 0 5px #4c9e9e;
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+img.mid-crop {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    height: 10vw;
+
+}
+
+.product img:hover {
+    transition: 0.3s ease;
+    transform: scale(1.03);
+
+}
+@media screen and (max-width: 1024px) {
+
+    .product {
+        width: 40%;
+    }
+    .product:hover {
+        transform: scale(1.02);
+        transition: 0.2s ease;
+    }
+        img.mid-crop {
+            height: 25vw;
+        }
+    
+}
+@media screen and (max-width: 500px) {
+
+    .product {
+        width: 100%;
+    }
+    .product:hover {
+        transform: scale(1.03);
+        transition: 0.2s ease;
+    }
+    img.mid-crop {
+        height: 50vw;
+    }
+    
+}
+    
+
+
+
+.quiz {
+    padding: 10px;
+
+}
+
+.quiz .options {
+    padding: 5px;
+}
+.quiz input
+.contact input
+.contact textarea {
+    /* color: #4c9e9e; */
+    padding: 10px;
+
+}
+
+.quiz .options:hover > input,
+.contact input:hover,
+.contact textarea:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+
+}
+.quiz input[type="submit"]:hover,
+.contact input[type="submit"]:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+
+}
+
+.quiz .options>input[type="radio"],
+.quiz .options>input[type="checkbox"] {
+    transform: scale(1.5);
+}
+.quiz .options:hover>input[type="radio"],
+.quiz .options:hover>input[type="checkbox"] {
+    transform: scale(1.75);
+    transition: 0.2s ease; 
+}
+.quiz .options:checked>input[type="radio"],
+.quiz .options:checked>input[type="checkbox"] {
+    transform: scale(2);
+    transition: 0.2s ease; 
+}
+
+.quiz input[type="radio"]:checked + input[type="text"],
+.quiz input[type="checkbox"]:checked+input[type="text"],
+.quiz input[type="text"]:focus,
+.contact input:focus, .contact textarea{
+    outline-color: #4c9e9e;
+
+}
+
+
+.options input:checked {
+    accent-color: #4c9e9e;
+}
+
+
+.quiz input[type="submit"]:disabled {
+    background-color: #ccc;
+    color: #333;
+}
+
+.quiz label,
+.contact input
+.contact textarea {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.quiz input[type="text"],
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    padding: 5px;
+    /* border: none; */
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    bottom: 0 ;
+
+    align-self: stretch;
+    justify-content: flex-end
+
+}
+.contact label {
+    /* font-size: 1.2em; */
+    font-weight: normal;
+    padding-bottom: 10px;
+    /* padding: 10px; */
+}
+.contact {
+    padding: 10px;
+
+}
+
+.contact textarea
+.contact input {
+    padding-top: 10px !important;
+
+}
+.contact textarea {
+    border-width: 2px;
+    width : 168.333px;
+    min-width : 168.333px;
+}
+
+.quiz input[type="radio"]:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.quiz .options:hover>input[type="radio"]:checked,
+.quiz .options:hover>input[type="checkbox"]:checked {
+    transform: scale(1.85);
+    transition: 0.2s ease;
+}
+.quiz input[type="radio"]:checked {
+       /*get bigger */
+    transform: scale(1.75);
+    transition: 0.2s ease;
+}
+
+/* radio button */
+.quiz input[type="radio"] {
+    /* border: none; */
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    bottom: 0 ;
+
+    align-self: stretch;
+    justify-content: flex-end
+
+}
+
+.quiz input[type="submit"], .contact input[type="submit"] {
+    margin-top: 10px;
+    background-color: #4c9e9e;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    bottom: 0;
+    align-self: stretch;
+    justify-content: flex-end
+}
+
+#quiz-summary .result  {
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #4c9e9e;
+    border-radius: 5px;
+    background-color: #4c9e9e;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+.result a {
+    background-color: rgb(1, 139, 139);
+    color: white;
+    padding: 5px 5px;
+    border-radius: 8px;
+    top: 1px;    
+}
+
+.result a:hover {
+    transition: 0.3s ease;
+    transform: scale(1.05);
+    padding: 10px 10px;
+}
+
+.result a:visited {
+    color: lightcyan;
+}
+

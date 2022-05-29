@@ -1,2 +1,2 @@
 # Danko
-The rip of Anko (web dev assignment)
+The of-brand Anko (web dev assignment)

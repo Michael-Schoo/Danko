@@ -1,5 +1,7 @@
-<!-- A quiz for selecting the best item to get -->
-<!-- The page where the header is stored - makes changing it easier -->
+<!-- Page where the products to be bought are here -->
+<!-- using local storage to remember -->
+
+<!-- Slideshow of products & images of them -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,21 +9,20 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Danko | Quiz</title>
+        <title>Danko | Cart</title>
         <link rel="stylesheet" href="./css/main.css">
         <!-- Add meta data -->
         <meta name="description"
             content="Danko is a company that sells products for the home. We have a wide variety of products for you to choose from.">
-        <meta name="title" content="Quiz">
+        <meta name="title" content="Cart">
         <meta name="color-scheme" content="only light">
-        <meta property="og:title" content="Products">
+        <meta property="og:title" content="Header">
         <meta property="og:site_name" content="Danko">
         <meta property="og:description"
             content="Danko is a company that sells products for the everything. We have a wide variety of products for you to choose from.">
         <meta property="og:type" content="website">
 
     </head>
-
 
     <header>
         <nav class="navbar">
@@ -47,9 +48,9 @@
                             <li><a href="/">Dropdown 4</a></li>
                         </ul>
                     </li>
-                    <li><a href="./quiz.html" class="active">Quiz</a></li>
+                    <li><a href="./quiz.html">Quiz</a></li>
                     <li><a href="./contact.html">Contact</a></li>
-                    <li class="services">
+                    <li class="services active">
                         <a href="./cart.html" id="navbar-cart">Cart🛒</a>
                         <!-- DROPDOWN MENU -->
                         <ul class="dropdown">
@@ -64,37 +65,35 @@
     <br>
 
     <section>
-    <noscript>To use the quiz, you will need JS</noscript>
-    <div class="quiz">
-        <div id="quiz-questions">
-            <h1 id="question">Question:</h1>
-            <div class="questions">
-                <div class="option">
-                    <input type="radio" name="answer">
-                    <label for="answer">1</label>
+
+        <noscript>To be-able to use the cart you will need JS</noscript>
+
+        <div class="products-cart">
+            <!-- An example - gets prepopulated using JS -->
+            <div class="cart-item" data-cartId="12345">
+                <div class="cart-item-image">
+                    <img src="./assets/images/2-in-1 Wi-Fi Projector/img1.webp" alt="">
                 </div>
-                <div class="option">
-                    <input type="radio" name="answer" value="2" required>
-                    <label for="answer">2</label>
+                <div class="cart-item-info">
+                    <h3 class="cart-item-name">Product 1</h3>
+                    <p class="cart-item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.
+                    </p>
+                    <p class="cart-item-price">$100</p>
+                    <!-- add button to remove -->
+                    <div class="cart-item-buttons">
+                        <button>Remove</button>
+                    </div>
+                    <!-- <div class="cart-item-quantity">
+                        <p>Quantity:</p>
+                        <input type="number" name="quantity" value="1">
+                    </div> -->
                 </div>
-                <div class="option">
-                    <input type="radio" name="answer" value="3" required>
-                    <label for="answer">3</label>
-                </div>
-                <div class="option">
-                    <input type="radio" name="answer" value="4" required>
-                    <label for="answer">4</label>
-                </div>
+
             </div>
-            <input id="next-button" type="submit" value="Next">
-        </div>
-        <div style="display:none" id="quiz-summary">
-            <p class="result">YAYAY</p>
 
         </div>
-    </div>
+    </section>
 
+    <script src="./scripts/cart.js"></script>
 
-</section>
-
-<script src="./scripts/quiz.js"></script>
+</html>

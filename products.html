@@ -1,1 +1,157 @@
-<!-- Slideshow of products & images of them -->
+<!-- Boxes of products with images/descriptions of them -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Danko | Products</title>
+        <link rel="stylesheet" href="./css/main.css">
+        <!-- Add meta data -->
+        <meta name="description" content="Danko is a company that sells products for the home. We have a wide variety of products for you to choose from.">
+        <meta name="title" content="Products">
+        <meta name="color-scheme" content="only light">
+        <meta property="og:title" content="Products">
+        <meta property="og:site_name" content="Danko">
+        <meta property="og:description"
+            content="Danko is a company that sells products for the everything. We have a wide variety of products for you to choose from.">
+        <meta property="og:type" content="website">
+
+    </head>
+
+
+    <header>
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">Danko</div>
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+                <!-- USING CHECKBOX HACK -->
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <!-- NAVIGATION MENUS -->
+                <div class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li class="services active">
+                        <a href="./products.html">Products</a>
+                        <!-- DROPDOWN MENU -->
+                        <ul class="dropdown">
+                            <li><a href="./products.html#Home & Living">Home & Living</a></li>
+                            <!-- <li><a href="./products/makeaproduct.html">Make a product</a></li> -->
+                            <li><a href="/">Dropdown 2</a></li>
+                            <li><a href="/">Dropdown 3</a></li>
+                            <li><a href="/">Dropdown 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./quiz.html">Quiz</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li class="services">
+                        <a href="./cart.html" id="navbar-cart">Cart🛒</a>
+                        <!-- DROPDOWN MENU -->
+                        <ul class="dropdown">
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+        <script src="./scripts/main.js"></script>
+
+    </header>
+    <br>
+    <section>
+        <h2 id="Home & Living">Home & Living</h2>
+        <div class="products">
+            <div class="product" data-productId="1">
+                <div class="product-image">
+                    <img class="mid-crop" src="./assets/images/2-in-1%20Wi-Fi%20Projector/img1.webp" alt="product1">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name">2 in 1 Wi-Fi Projector</h2>
+                    <p class="product-desc">Create your own mini-theatre in the comfort of your home with this 2-in-1
+                        Wi-Fi-enabled projector that has an in-built DVD player. </p>
+                    <div class="product-stats">
+                        <li class="product-stock">Only <strong style="color: orange;opacity:0.8;">32</strong> left</li>
+                        <li class="product-price">A bargain at <strong class="not"
+                                style="color: yellowgreen;opacity:0.8">$</strong><strong
+                                style="color: yellowgreen;opacity:0.8">149</strong></li>
+                    </div>
+                </div>
+                <div class="product-buttons">
+                    <button class="add-to-cart" title="Add this item to the cart">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product" data-productId="2">
+                <div class="product-image">
+                    <img class="mid-crop" src="./assets/images/Artificial Succulent in Pot - Assorted/img1.webp"
+                        alt="product1">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name">Artificial Succulent in Pot - Assorted</h2>
+                    <p class="product-desc">Give your indoor space a refreshing update with this artificial plant that
+                        comes in a pot.</p>
+                    <div class="product-stats">
+                        <li class="product-price">Only <strong class="not"
+                                style="color: green;opacity:0.8">$</strong><strong
+                                style="color: green; opacity:0.8">3.00</strong><i
+                                style="color: green; opacity: 0.8; font-style: normal;">ea</i></li>
+                        <li class="product-stock">Get up to <strong title="80 items left"
+                                style="color: yellowgreen;opacity:0.8">362</strong> units</li>
+                    </div>
+                </div>
+                <div class="product-buttons">
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product" data-productId="3">
+                <div class="product-image">
+                    <img class="mid-crop" src="./assets/images/Cast Iron Casserole Pot - Blue/img1.webp" alt="product1">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name">Cast Iron Casserole Pot - Blue</h2>
+                    <p class="product-desc">Make casseroles, stews and other hearty meals for your loved ones in this
+                        cast iron pot.</p>
+                    <div class="product-stats">
+                        <li class="product-stock">Only <strong title="1 items left"
+                                style="color: orangered;opacity:0.8">1</strong> left</li>
+                        <li class="product-price">On sale at <strong class="not"
+                                style="color: yellowgreen;opacity:0.8">$</strong><strong
+                                style="color: yellowgreen; opacity:0.8"
+                                title="Was $29, now $20 temporally!">20</strong><i
+                                style="color: green; opacity: 0.8; font-style: normal;"></i></li>
+                    </div>
+                </div>
+                <div class="product-buttons">
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product" data-productId="1">
+                <div class="product-image">
+                    <img class="mid-crop" src="./assets/images/2-in-1 Wi-Fi Projector/img4.webp" alt="product1">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name">3 in 4 DVD Projector</h2>
+                    <p class="product-desc">Create your own large-theatre in the comfort of your car with this 3-in-4
+                        5G-enabled projector that has an in-built PS5. </p>
+                    <div class="product-stats">
+                        <li class="product-stock"><strong style="color: green;opacity:0.8;">62,840</strong> intrested
+                        </li>
+                        <li class="product-price">A <strong class="not"
+                                style="color: orange;opacity:0.8">$</strong><strong
+                                style="color: orange;opacity:0.8">98.95</strong> scam</li>
+                    </div>
+                </div>
+                <div class="product-buttons">
+                    <button class="add-to-cart" title="Add this item to the cart">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./scripts/products.js"></script>
+
+</html>
