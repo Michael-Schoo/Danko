@@ -1,0 +1,189 @@
+/* QUIZ + CONTACT */
+/* The CSS for mainly the quiz.html and contact.html */
+/* Joint because of how much stuff shared */
+
+.contact,
+.quiz {
+    padding: 10px;
+
+}
+
+.quiz .options {
+    padding: 5px;
+    transition: opacity 2s, transform 2s ease-out;
+
+}
+
+.quiz input .contact input .contact textarea,
+.productFullScreen input {
+    padding: 10px;
+
+}
+
+.quiz .options:hover>input,
+.contact input:hover,
+.contact textarea:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+
+}
+
+.quiz input[type="submit"]:hover,
+.contact input[type="submit"]:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+
+}
+
+.quiz .options>input[type="radio"],
+.quiz .options>input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+.quiz .options:hover>input[type="radio"],
+.quiz .options:hover>input[type="checkbox"] {
+    transform: scale(1.75);
+    transition: 0.2s ease;
+}
+
+.quiz .options:checked>input[type="radio"],
+.quiz .options:checked>input[type="checkbox"] {
+    transform: scale(2);
+    transition: 0.2s ease;
+}
+
+.quiz input[type="radio"]:checked+input[type="text"],
+.quiz input[type="checkbox"]:checked+input[type="text"],
+.quiz input[type="text"]:focus,
+.contact input:focus,
+.contact textarea {
+    outline-color: #4c9e9e;
+}
+
+.options input:checked {
+    accent-color: #4c9e9e;
+}
+
+.quiz input[type="submit"]:disabled,
+.productFullScreen input[type="submit"]:disabled {
+    background-color: #ccc;
+    color: #333;
+}
+
+.quiz label,
+.contact input .contact textarea {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.quiz input[type="text"],
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    bottom: 0;
+    align-self: stretch;
+    justify-content: flex-end
+}
+
+.contact label {
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+
+.contact textarea .contact input {
+    padding-top: 10px !important;
+}
+
+.contact textarea {
+    border-width: 2px;
+    width: 168.333px;
+    min-width: 168.333px;
+}
+
+.quiz input[type="radio"]:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.quiz .options:hover>input[type="radio"]:checked,
+.quiz .options:hover>input[type="checkbox"]:checked {
+    transform: scale(1.85);
+    transition: 0.2s ease;
+}
+
+.quiz input[type="radio"]:checked {
+    transform: scale(1.75);
+    transition: 0.2s ease;
+}
+
+.quiz input[type="radio"] {
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    bottom: 0;
+
+    align-self: stretch;
+    justify-content: flex-end
+}
+
+.quiz input[type="submit"],
+.contact input[type="submit"] {
+    margin-top: 10px;
+    background-color: #4c9e9e;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    bottom: 0;
+    align-self: stretch;
+    justify-content: flex-end
+}
+
+#quiz-summary .result {
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #4c9e9e;
+    border-radius: 5px;
+    background-color: #4c9e9e;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.result a {
+    background-color: rgb(1, 139, 139);
+    color: white;
+    padding: 5px 5px;
+    border-radius: 8px;
+    top: 1px;
+}
+
+.result a:hover {
+    transition: 0.3s ease;
+    transform: scale(1.05);
+    padding: 10px 10px;
+}
+
+.result a:visited {
+    color: lightcyan;
+}

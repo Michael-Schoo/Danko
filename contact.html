@@ -7,83 +7,90 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Danko | Contact</title>
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/quiz+contact.css">
         <!-- Add meta data -->
         <meta name="description"
             content="Danko is a company that sells products for the home. We have a wide variety of products for you to choose from.">
-        <meta name="title" content="Products">
+        <meta name="title" content="Contact">
         <meta name="color-scheme" content="only light">
         <meta property="og:title" content="Contact">
         <meta property="og:site_name" content="Danko">
+        <meta property="og:image" content="https://Michael-Schoo.github.io/Danko/logo.png">
         <meta property="og:description"
             content="Danko is a company that sells products for the everything. We have a wide variety of products for you to choose from.">
         <meta property="og:type" content="website">
+        <link rel="icon" href="./favicon.svg">
 
     </head>
 
-    <header>
-        <nav class="navbar">
-            <!-- LOGO -->
-            <div class="logo">Danko</div>
-            <!-- NAVIGATION MENU -->
-            <ul class="nav-links">
-                <!-- USING CHECKBOX HACK -->
-                <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                <!-- NAVIGATION MENUS -->
-                <div class="menu">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./contact.html" class="active">Contact</a></li>
-                    <li class="services">
-                        <a href="./products.html">Products</a>
-                        <!-- DROPDOWN MENU -->
-                        <ul class="dropdown">
-                            <li><a href="./products.html#Home & Living">Home & Living</a></li>
-                            <!-- <li><a href="./products/makeaproduct.html">Make a product</a></li> -->
-                            <li><a href="/">Dropdown 2</a></li>
-                            <li><a href="/">Dropdown 3</a></li>
-                            <li><a href="/">Dropdown 4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./quiz.html">Quiz</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li class="services">
-                        <a href="./cart.html" id="navbar-cart">Cart🛒</a>
-                        <!-- DROPDOWN MENU -->
-                        <ul class="dropdown">
-                        </ul>
-                    </li>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <!-- LOGO -->
+                <div class="logo"><a href="./index.html">Danko</a></div>
+                <!-- NAVIGATION MENU -->
+                <div class="nav-links">
+                    <!-- USING CHECKBOX HACK -->
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                    <!-- NAVIGATION MENUS -->
+                    <div class="menu">
+                        <div><a href="./index.html">Home</a></div>
+                        <div class="services">
+                            <a href="./products.html">Products</a>
+                            <!-- DROPDOWN MENU -->
+                            <ul class="dropdown">
+                                <li><a href="./products.html#home-living">Home & Living</a></li>
+                                <li><a href="./products.html#">Lorem ipsum</a></li>
+                                <li><a href="./products.html#">Ipsum lorem</a></li>
+                                <li><a href="./products.html#">Lorum ipsem</a></li>
+                                <!-- Lorem ipsum is messed up on purpose -->
+                                <!-- Bottom elements are filler because there aren't many categories yet -->
+                            </ul>
+                        </div>
+                        <div><a href="./quiz.html">Quiz</a></div>
+                        <div><a href="./contact.html" class="active">Contact</a></div>
+                        <div class="services">
+                            <a href="./cart.html" id="navbar-cart">Cart🛒</a>
+                            <!-- DROPDOWN MENU -->
+                            <ul class="dropdown"></ul>
+                            <!-- Would make it a list containing the items on cart, but not yet -->
+                        </div>
+                    </div>
                 </div>
-            </ul>
-        </nav>
-        <script src="./scripts/main.js"></script>
+            </nav>
 
-    </header>
-    <br>
+            <script src="./scripts/main.js"></script>
+
+        </header>
+        <br>
 
 
-    <section>
-        <div class="contact">
-            <!-- <h1>Contact</h1> -->
-            <h2>Send a message:</h2>
-            <form action="https://www.youtube.com/watch" method="get">
-                <input type="hidden" name="v" value="dQw4w9WgXcQ">
+        <section>
+            <div class="contact">
+                <!-- <h1>Contact</h1> -->
+                <h2>Send a message:</h2>
+                <form action="https://www.youtube.com/watch" method="get">
+                    <input type="hidden" name="v" value="dQw4w9WgXcQ">
 
-                <label for="name">Name:</label>
-                <br>
-                <input type="text" id="name" name="name" placeholder="Your name..">
-                <br><br>
-                <label for="email">Email:</label>
-                <br>
-                <input type="email" id="email" name="email" placeholder="Your email..">
-                <br><br>
-                <label for="message">Message:</label>
-                <br>
-                <textarea id="message" name="message" placeholder="Your message.."></textarea>
-                <br><br>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </section>
+                    <label for="name">Name:</label>
+                    <br>
+                    <input type="text" id="name" name="name" placeholder="Your name..">
+                    <br><br>
+                    <label for="email">Email:</label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="Your email..">
+                    <br><br>
+                    <label for="message">Message:</label>
+                    <br>
+                    <textarea id="message" name="message" placeholder="Your message.."></textarea>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </body>
 
 </html>

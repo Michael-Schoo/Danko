@@ -1,0 +1,124 @@
+/* KONAMI */
+/* The CSS for the every file when the sequence is played */
+
+.konami {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #4c9e9e;
+    border-radius: 5px;
+    background-color: #4c9e9e;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.konami {
+    color: white !important
+}
+
+body.konami {
+    background: linear-gradient(#ff0000 0%, #b200ff 50%, #ff0000 100%);
+    background-size: 400% 400%;
+    animation: konami-animation 4s infinite;
+    font-family: cursive;
+
+
+    /* position: fixed; */
+}
+
+body.konami :hover {
+    /* background-position: right bottom; */
+    /* make bigger */
+    /* opacity: 75%; */
+}
+
+body.konami nav {
+    background: linear-gradient(#ff0000 0%, #b200ff 50%, #ff0000 100%);
+    background-size: 400% 400%;
+    animation: konami-animation 4s ease-in;
+
+}
+
+body.konami nav {
+    background: linear-gradient(#ff0000 0%, #b200ff 50%, #ff0000 100%);
+    background-size: 400% 400%;
+    margin: 100px;
+    animation: konami-animation-font 1s infinite;
+
+}
+
+body.konami img {
+    background: linear-gradient(#ff0000 0%, #b200ff 50%, #ff0000 100%) !important;
+    background-size: 400% 400%;
+    animation: konami-animation-padding 1s infinite;
+
+}
+
+body.konami button,
+body.konami input,
+body.konami textarea {
+    background: linear-gradient(#ff0000 0%, #b200ff 50%, #ff0000 100%) !important;
+    background-size: 400% 400%;
+    animation: konami-animation-padding 1s infinite;
+
+}
+
+/* konami-animations */
+@keyframes konami-animation {
+    0% {
+        background-position: 0% 0%;
+        background-size: 100% 10%;
+        font-size: large;
+        padding: 0px;
+    }
+
+    50% {
+        background-position: 100% 0% 10%;
+        background-size: 100% 100%;
+        font-size: small;
+        padding: 10px;
+
+    }
+
+    100% {
+        background-position: 0% 100%;
+        background-size: 100% 10%;
+        font-size: medium;
+        padding: 0px;
+    }
+}
+
+@keyframes konami-animation-font {
+    0% {
+        font-size: large;
+    }
+
+    50% {
+        font-size: small;
+
+    }
+
+    100% {
+        font-size: medium;
+    }
+}
+
+@keyframes konami-animation-padding {
+    0% {
+        padding: 2px;
+        margin: 20px;
+    }
+
+    50% {
+        padding: 25px;
+        margin: 2px;
+
+    }
+
+    100% {
+        padding: 2px;
+        margin: 20px;
+    }
+}

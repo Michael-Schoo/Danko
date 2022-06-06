@@ -8,93 +8,88 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Danko | Quiz</title>
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/quiz+contact.css">
         <!-- Add meta data -->
         <meta name="description"
             content="Danko is a company that sells products for the home. We have a wide variety of products for you to choose from.">
         <meta name="title" content="Quiz">
         <meta name="color-scheme" content="only light">
-        <meta property="og:title" content="Products">
+        <meta property="og:title" content="Quiz">
         <meta property="og:site_name" content="Danko">
+        <meta property="og:image" content="https://Michael-Schoo.github.io/Danko/logo.png">
         <meta property="og:description"
             content="Danko is a company that sells products for the everything. We have a wide variety of products for you to choose from.">
         <meta property="og:type" content="website">
+        <link rel="icon" href="./favicon.svg">
+
 
     </head>
 
+    <body>
 
-    <header>
-        <nav class="navbar">
-            <!-- LOGO -->
-            <div class="logo">Danko</div>
-            <!-- NAVIGATION MENU -->
-            <ul class="nav-links">
-                <!-- USING CHECKBOX HACK -->
-                <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                <!-- NAVIGATION MENUS -->
-                <div class="menu">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li class="services">
-                        <a href="./products.html">Products</a>
-                        <!-- DROPDOWN MENU -->
-                        <ul class="dropdown">
-                            <li><a href="./products.html#Home & Living">Home & Living</a></li>
-                            <!-- <li><a href="./products/makeaproduct.html">Make a product</a></li> -->
-                            <li><a href="/">Dropdown 2</a></li>
-                            <li><a href="/">Dropdown 3</a></li>
-                            <li><a href="/">Dropdown 4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./quiz.html" class="active">Quiz</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li class="services">
-                        <a href="./cart.html" id="navbar-cart">Cart🛒</a>
-                        <!-- DROPDOWN MENU -->
-                        <ul class="dropdown">
-                        </ul>
-                    </li>
+        <header>
+            <nav class="navbar">
+                <!-- LOGO -->
+                <div class="logo"><a href="./index.html">Danko</a></div>
+                <!-- NAVIGATION MENU -->
+                <div class="nav-links">
+                    <!-- USING CHECKBOX HACK -->
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                    <!-- NAVIGATION MENUS -->
+                    <div class="menu">
+                        <div><a href="./index.html">Home</a></div>
+                        <div class="services">
+                            <a href="./products.html">Products</a>
+                            <!-- DROPDOWN MENU -->
+                            <ul class="dropdown">
+                                <li><a href="./products.html#home-living">Home & Living</a></li>
+                                <li><a href="./products.html#">Lorem ipsum</a></li>
+                                <li><a href="./products.html#">Ipsum lorem</a></li>
+                                <li><a href="./products.html#">Lorum ipsem</a></li>
+                                <!-- Lorem ipsum is messed up on purpose -->
+                                <!-- Bottom elements are filler because there aren't many categories yet -->
+                            </ul>
+                        </div>
+                        <div><a href="./quiz.html" class="active">Quiz</a></div>
+                        <div><a href="./contact.html">Contact</a></div>
+                        <div class="services">
+                            <a href="./cart.html" id="navbar-cart">Cart🛒</a>
+                            <!-- DROPDOWN MENU -->
+                            <ul class="dropdown"></ul>
+                            <!-- Would make it a list containing the items on cart, but not yet -->
+                        </div>
+                    </div>
                 </div>
-            </ul>
-        </nav>
-        <script src="./scripts/main.js"></script>
+            </nav>
+            <script src="./scripts/main.js"></script>
+            <script src="./scripts/data/quiz.js"></script>
 
-    </header>
-    <br>
+        </header>
+        <br>
 
-    <section>
-    <noscript>To use the quiz, you will need JS</noscript>
-    <div class="quiz">
-        <div id="quiz-questions">
-            <h1 id="question">Question:</h1>
-            <div class="questions">
-                <div class="option">
-                    <input type="radio" name="answer">
-                    <label for="answer">1</label>
+        <section>
+            <noscript>To use the quiz, you will need JS</noscript>
+            <div class="quiz">
+                <div id="quiz-questions">
+                    <h1 id="question">Question:</h1>
+                    <div class="questions">
+                        <!-- JS appending the questions -->
+                    </div>
+                    <input id="next-button" type="submit" value="Next">
                 </div>
-                <div class="option">
-                    <input type="radio" name="answer" value="2" required>
-                    <label for="answer">2</label>
-                </div>
-                <div class="option">
-                    <input type="radio" name="answer" value="3" required>
-                    <label for="answer">3</label>
-                </div>
-                <div class="option">
-                    <input type="radio" name="answer" value="4" required>
-                    <label for="answer">4</label>
+                <div style="display:none" id="quiz-summary">
+                    <p class="result">YAY</p>
+
                 </div>
             </div>
-            <input id="next-button" type="submit" value="Next">
-        </div>
-        <div style="display:none" id="quiz-summary">
-            <p class="result">YAYAY</p>
-
-        </div>
-    </div>
 
 
-</section>
+        </section>
 
-<script src="./scripts/quiz.js"></script>
+        <script src="./scripts/quiz.js"></script>
+
+    </body>
+
+</html>

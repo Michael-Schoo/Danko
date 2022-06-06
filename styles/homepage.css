@@ -1,0 +1,204 @@
+/* HOMEPAGE */
+/* The CSS for mainly the index.html */
+
+/* Slideshow container */
+.products-carousel {
+    max-width: 1000px;
+    /* position: flex; */
+    margin: auto;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 20px;
+    /* round */
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+/* Hide the images by default */
+.products-carousel .slide {
+    margin: 10px;
+    margin-bottom: 25px;
+}
+
+.products-carousel img {
+    border-radius: 10px;
+}
+
+.products-carousel .buttons {
+    display: flex
+}
+
+.products-carousel a {
+    text-decoration: none;
+    color: lightgrey;
+    transition: 0.3s ease;
+}
+
+.products-carousel a:hover {
+    color: white;
+}
+
+.products-carousel .buttons button {
+    cursor: pointer;
+    width: auto;
+    padding: 7.5px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    /* align left */
+    z-index: 10;
+    border-radius: 5px;
+    background-color: darkslategray;
+    color: white;
+    margin: -1px;
+    margin-top: 5px;
+    border: 2px solid #4c9e9e;
+}
+
+/* Make the buttons have fancy styles so they can be next to each other */
+.products-carousel .buttons .left {
+    border-radius: 5px 0 0 5px;
+}
+
+.products-carousel .buttons .next {
+    border-radius: 0 5px 5px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.products-carousel .buttons button:hover {
+    background-color: #4c9e9e;
+    color: white;
+    background-color: #4c9e9e;
+}
+
+.products-carousel .slide .name {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 72px;
+    position: absolute;
+    text-align: center;
+}
+
+/* Fading animation */
+.products-carousel img {
+    transition: left 2s;
+    background-color: darkgreen;
+}
+
+.products-carousel img:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 500px) {
+    .products-carousel .slide img {
+        width: 100%
+    }
+
+    .products-carousel .slide {
+        margin: 0px;
+        margin-bottom: 0px;
+    }
+
+    img.mid-less-crop {
+        height: 30vh;
+    }
+
+    .home-actions a {
+        flex-basis: 100%;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+}
+
+
+.home-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+
+.home-actions a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.6s ease;
+    border-color: #4c9e9e;
+    border-width: 2px;
+    border-style: solid;
+    color: #4c9e9e;
+    background-color: white;
+}
+
+.home-actions a:hover {
+    background-color: #4c9e9e;
+    color: white;
+}
+
+.home-flex-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: #f2f2f2;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.home-flex-boxes div {
+    flex-basis: 50%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .home-flex-boxes {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .home-flex-boxes div {
+        flex-basis: 100%;
+        padding: 5px;
+        margin: 5px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.home-flex-boxes a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.6s ease;
+    border-color: #4c9e9e;
+    border-width: 2px;
+    border-style: solid;
+    color: #4c9e9e;
+    background-color: white;
+
+}
+
+.home-flex-boxes a:hover {
+    background-color: #4c9e9e;
+    color: white;
+}

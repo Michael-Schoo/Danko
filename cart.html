@@ -10,90 +10,86 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Danko | Cart</title>
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/cart.css">
         <!-- Add meta data -->
         <meta name="description"
             content="Danko is a company that sells products for the home. We have a wide variety of products for you to choose from.">
         <meta name="title" content="Cart">
         <meta name="color-scheme" content="only light">
-        <meta property="og:title" content="Header">
+        <meta property="og:title" content="Cart">
         <meta property="og:site_name" content="Danko">
+        <meta property="og:image" content="https://Michael-Schoo.github.io/Danko/logo.png">
         <meta property="og:description"
             content="Danko is a company that sells products for the everything. We have a wide variety of products for you to choose from.">
         <meta property="og:type" content="website">
+        <link rel="icon" href="./favicon.svg">
+
+        <script src="./scripts/data/products.js"></script>
 
     </head>
 
-    <header>
-        <nav class="navbar">
-            <!-- LOGO -->
-            <div class="logo">Danko</div>
-            <!-- NAVIGATION MENU -->
-            <ul class="nav-links">
-                <!-- USING CHECKBOX HACK -->
-                <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                <!-- NAVIGATION MENUS -->
-                <div class="menu">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li class="services">
-                        <a href="./products.html">Products</a>
-                        <!-- DROPDOWN MENU -->
-                        <ul class="dropdown">
-                            <li><a href="./products.html#Home & Living">Home & Living</a></li>
-                            <!-- <li><a href="./products/makeaproduct.html">Make a product</a></li> -->
-                            <li><a href="/">Dropdown 2</a></li>
-                            <li><a href="/">Dropdown 3</a></li>
-                            <li><a href="/">Dropdown 4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./quiz.html">Quiz</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li class="services active">
-                        <a href="./cart.html" id="navbar-cart">Cart🛒</a>
-                        <!-- DROPDOWN MENU -->
-                        <ul class="dropdown">
-                        </ul>
-                    </li>
-                </div>
-            </ul>
-        </nav>
-        <script src="./scripts/main.js"></script>
+    <body>
 
-    </header>
-    <br>
-
-    <section>
-
-        <noscript>To be-able to use the cart you will need JS</noscript>
-
-        <div class="products-cart">
-            <!-- An example - gets prepopulated using JS -->
-            <div class="cart-item" data-cartId="12345">
-                <div class="cart-item-image">
-                    <img src="./assets/images/2-in-1 Wi-Fi Projector/img1.webp" alt="">
-                </div>
-                <div class="cart-item-info">
-                    <h3 class="cart-item-name">Product 1</h3>
-                    <p class="cart-item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.
-                    </p>
-                    <p class="cart-item-price">$100</p>
-                    <!-- add button to remove -->
-                    <div class="cart-item-buttons">
-                        <button>Remove</button>
+        <header>
+            <nav class="navbar">
+                <!-- LOGO -->
+                <div class="logo"><a href="./index.html">Danko</a></div>
+                <!-- NAVIGATION MENU -->
+                <div class="nav-links">
+                    <!-- USING CHECKBOX HACK -->
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                    <!-- NAVIGATION MENUS -->
+                    <div class="menu">
+                        <div><a href="./index.html">Home</a></div>
+                        <div class="services">
+                            <a href="./products.html">Products</a>
+                            <!-- DROPDOWN MENU -->
+                            <ul class="dropdown">
+                                <li><a href="./products.html#home-living">Home & Living</a></li>
+                                <li><a href="./products.html#">Lorem ipsum</a></li>
+                                <li><a href="./products.html#">Ipsum lorem</a></li>
+                                <li><a href="./products.html#">Lorum ipsem</a></li>
+                                <!-- Lorem ipsum is messed up on purpose -->
+                                <!-- Bottom elements are filler because there aren't many categories yet -->
+                            </ul>
+                        </div>
+                        <div><a href="./quiz.html">Quiz</a></div>
+                        <div><a href="./contact.html">Contact</a></div>
+                        <div class="services">
+                            <a href="./cart.html" class="active" id="navbar-cart">Cart🛒</a>
+                            <!-- DROPDOWN MENU -->
+                            <ul class="dropdown"></ul>
+                            <!-- Would make it a list containing the items on cart, but not yet -->
+                        </div>
                     </div>
-                    <!-- <div class="cart-item-quantity">
-                        <p>Quantity:</p>
-                        <input type="number" name="quantity" value="1">
-                    </div> -->
                 </div>
+            </nav>
+            <script src="./scripts/main.js"></script>
 
+        </header>
+        <br>
+
+        <section>
+            <div>
+                <noscript>To be-able to use the cart you will need JS</noscript>
+                <div class="products-cart">
+                    <h1>Your cart</h1>
+                    <!-- USING JS TO ADD THE PRODUCTS IN THE CART -->
+                </div>
+                <div class="checkout">
+                    <p style="font-style: italic">Sorry, we are currently having issues with our payment partner, thanks
+                        for
+                        your support 😎</p>
+                    <p style="font-style: italic">We will fix this very quickly, in the meantime fill up your cart...
+                    </p>
+                    <br>
+                </div>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <script src="./scripts/cart.js"></script>
+        <script src="./scripts/cart.js"></script>
+    </body>
 
 </html>

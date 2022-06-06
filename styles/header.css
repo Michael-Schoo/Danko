@@ -1,0 +1,154 @@
+/* HEADER */
+/* The CSS for every page's header */
+
+
+nav a {
+    text-decoration: none;
+}
+
+nav div,
+nav li {
+    list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: teal;
+    color: #fff;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: "Comic Sans MS";
+    z-index: 100;
+    padding: 12.5px;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+nav .nav-links a {
+    color: #fff;
+}
+
+/* LOGO */
+nav .logo {
+    font-size: 32px;
+    font-family: Forte
+}
+
+nav .logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* NAVBAR MENU */
+nav .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    z-index: 100;
+
+}
+
+nav .menu li:hover,
+nav .menu div:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    /* transition: 0.3s ease; */
+    z-index: 99;
+}
+
+nav .menu li,
+nav .menu div {
+    padding: 5px 14px;
+    transition: 0.3s ease-out;
+}
+
+/* DROPDOWN MENU */
+nav .services {
+    position: relative;
+}
+
+nav .dropdown {
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute;
+    /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 17px;
+    left: -1.7em;
+    /* drop shadow */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+nav .dropdown li,
+nav .dropdown div {
+    padding: 0.25em 0.5em;
+    /* padding: 0; */
+    width: 8em;
+    text-align: center;
+    font-size: 1em
+}
+
+nav .dropdown li:hover,
+nav .dropdown div:hover {
+    background-color: #4c9e9e;
+}
+
+nav .services:hover .dropdown {
+    display: block;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+nav input[type=checkbox] {
+    display: none;
+}
+
+/*HAMBURGER MENU*/
+nav .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    nav .menu {
+        display: none;
+        position: absolute;
+        background-color: teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    nav .menu li:hover,
+    nav .menu div:hover {
+        display: inline-block;
+        background-color: #4c9e9e;
+        transition: 0.3s ease;
+    }
+
+    nav input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+
+    nav .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+    nav .dropdown li:hover,
+    nav .dropdown div:hover {
+        background-color: #4c9e9e;
+    }
+}

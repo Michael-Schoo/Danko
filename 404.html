@@ -1,4 +1,4 @@
-<!-- Main page -->
+<!-- Contact page that sends to rickroll -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,23 +6,39 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Danko | The best place to buy from</title>
+        <title>404 Danko not found</title>
         <link rel="stylesheet" href="./styles/main.css">
-        <link rel="stylesheet" href="./styles/homepage.css">
         <!-- Add meta data -->
         <meta name="description"
             content="Danko is a company that sells products for the home. We have a wide variety of products for you to choose from.">
-        <meta name="title" content="Danko | The best place to buy from">
+        <meta name="title" content="404 | Imagine going to an incorrect page">
         <meta name="color-scheme" content="only light">
-        <meta property="og:title" content="Danko | The best place to buy from">
+        <meta property="og:title" content="404 | Imagine going to an incorrect page">
         <meta property="og:site_name" content="Danko">
         <meta property="og:image" content="https://Michael-Schoo.github.io/Danko/logo.png">
         <meta property="og:description"
             content="Danko is a company that sells products for the everything. We have a wide variety of products for you to choose from.">
         <meta property="og:type" content="website">
         <link rel="icon" href="./favicon.svg">
+        <style>
+            /* Make the 404 message in the center */
+            body {
+                overflow: hidden;
+                /* position: relative; */
+                width: 100%;
+            }
 
-
+            h1 {
+                font-size: 15em;
+                margin: 0;
+                margin-top: 50px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        </style>
     </head>
 
     <body>
@@ -37,7 +53,7 @@
                     <label for="checkbox_toggle" class="hamburger">&#9776;</label>
                     <!-- NAVIGATION MENUS -->
                     <div class="menu">
-                        <div><a href="./index.html" class="active">Home</a></div>
+                        <div><a href="./index.html">Home</a></div>
                         <div class="services">
                             <a href="./products.html">Products</a>
                             <!-- DROPDOWN MENU -->
@@ -62,62 +78,22 @@
                 </div>
             </nav>
             <script src="./scripts/main.js"></script>
-            <script src="./scripts/data/products.js"></script>
 
         </header>
         <br>
 
         <section>
-            <div style="background-color: darkslategray; color:white; border-radius: 10px;">
-                <div class="products-carousel">
-                    <div class="slide fade">
-                        <img class="mid-less-crop" src="./assets/images/product-3-tier-trolley-pink/img1.webp"
-                            alt="Image of a 3 Tier trolley - Pink" style="width:75%">
-                        <div class="name">1/3: Name of product</div>
-                        <div class="buttons">
-                            <a class="prev" title="Go to the previous image on the image carousel"
-                                onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" title="Go to the next image on the image carousel"
-                                onclick="plusSlides(1)">&#10095;</a>
-                        </div>
-                    </div>
-                    <br>
 
-                </div>
-            </div>
+            <h1 title="Imagine going to an incorrect page">404</h1>
+            <script>
+                // Tell the user that the page is not found, 
+                // and since they are on the DevTools they should work at Danko
+                console.error("You are on the 404 page. This page does not exist.");
+                // only on "michael-schoo.github.io" so it can be a link
+                console.info(`If you are skilled in HTML, CSS, and Javascript, you can work for us!\nBut first buy a product from https://michael-schoo.github.io/Danko/products.html`);
 
-            <div class="home-actions">
-
-                <a href="./products.html">Check out the products</a>
-                <a href="./quiz.html">Take the quiz!</a>
-                <a href="./contact.html">Contact us!</a>
-
-            </div>
-
-            <br><br>
-            <div class="home-flex-boxes">
-                <div class="about-company">
-                    <h2>About the company and why you should buy from us!</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt eget arcu nec fermentum.
-                        Etiam vitae facilisis
-                        tortor, nec laoreet tortor. Ut pretium odio quis maximus mollis. In non ex nec urna ullamcorper
-                        malesuada. Duis luctus
-                        nisl sed metus rutrum efficitur dignissim id magna. Integer volutpat mi aliquet, dictum nisl et,
-                        consequat quam.
-                        Praesent eu nibh in magna feugiat molestie. Ut tempus dui a pretium tempus. Nulla eget efficitur
-                        dui. Quisque eget felis
-                        suscipit, tempor diam at, hendrerit nulla. Etiam commodo, diam non viverra ultricies, elit massa
-                        fringilla nibh, finibus
-                        porta ex odio quis quam. In luctus faucibus tincidunt. Praesent ac hendrerit sapien.
-                    </p><br>
-                    <a href="./products.html">Look at the products we offer</a>
-                </div>
-            </div>
+            </script>
         </section>
-
-        <script src="./scripts/homepage.js"></script>
-        
     </body>
 
 </html>

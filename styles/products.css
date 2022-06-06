@@ -1,0 +1,300 @@
+/* PRODUCTS */
+/* The CSS for mainly the products.html */
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+
+.product {
+    width: 20%;
+    margin: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    transition: 0.3s ease;
+    color: #333;
+    /* background-color: #f2f2f2; */
+}
+
+
+.product img,
+.productFullScreen img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.product-buttons button,
+.products-cart button,
+.productFullScreen button,
+.productFullScreen a.outline {
+    background-color: #4c9e9e;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    bottom: 0;
+    align-self: stretch;
+    justify-content: flex-end;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.productFullScreen a.outline {
+    padding: 8px;
+}
+
+.product-buttons button.outline,
+.products-cart button.outline,
+.productFullScreen button.outline,
+.productFullScreen a.outline {
+    color: #4c9e9e;
+    background-color: #fff;
+    border-color: #4c9e9e;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.product-info,
+.product-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+}
+
+.product-info h3 a {
+    text-decoration: none;
+    text-align: center;
+    /* text in center */
+    display: block;
+    font-size: larger;
+    color: black;
+}
+
+.product-info h3 a:visited {
+    color: grey;
+}
+
+.product-info h3:hover a {
+    color: #4c9e9e;
+}
+
+
+.product-buttons,
+.cart-item-buttons {
+    bottom: 0;
+    transition: 0.3s ease-out;
+}
+
+
+.product button,
+.products-cart button,
+.productFullScreen button {
+    transition: 0.2s ease-out;
+}
+
+.product button:hover,
+.products-cart button:hover,
+.productFullScreen button:hover {
+    transform: scale(1.02);
+    transition: 0.2s ease;
+}
+
+.product button:hover,
+.products-cart button:hover,
+.productFullScreen button:hover {
+    transform: scale(1.02);
+    transition: 0.2s ease;
+}
+
+.products-cart button:hover,
+.productFullScreen button:hover {
+    transform: scale(1.05);
+}
+
+.product button.outline:hover,
+.products-cart button.outline:hover,
+.productFullScreen button.outline:hover,
+.productFullScreen a.outline:hover {
+    transform: scale(1);
+    background-color: #4c9e9e;
+    color: #fff;
+}
+
+.product button:disabled,
+.products-cart button:disabled,
+.productFullScreen button:disabled {
+    background-color: #ccc;
+    color: #333;
+}
+
+.product-stats {
+    padding-bottom: 20px;
+    color: grey;
+    font-size: 0.9em;
+}
+
+.products li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 0 10px;
+    line-height: 1.5em;
+
+
+}
+
+.product-stats li:not(:last-child):after {
+    content: "•";
+}
+
+li::after {
+    font-size: 1em;
+    padding: 0 5px;
+}
+
+.product-stats strong {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.product-stats li strong.not {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+/* flexbox unless size is too small */
+.product:hover {
+    box-shadow: 0 0 5px #4c9e9e;
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .product {
+        width: 40%;
+    }
+
+    img.mid-crop {
+        height: 25vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .product {
+        width: 100%;
+    }
+
+    img.mid-crop {
+        height: 50vw;
+    }
+
+    .productFullScreen .reviews {
+        width: 100%;
+    }
+
+    .productFullScreen {
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.productFullScreen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5px;
+
+}
+
+.productFullScreen img {
+    width: 50vh;
+    height: auto;
+    margin-bottom: 10px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+}
+
+.productFullScreen .overview {
+    width: 50vh;
+    height: auto;
+    padding-bottom: 10px;
+    position: relative;
+    top: -10px;
+    right: -10px;
+
+}
+
+.productFullScreen .flexbias {
+    flex-basis: 100%;
+}
+
+.productFullScreen .reviews {
+    width: 40vh;
+    max-height: 100vh;
+    min-height: 50vh;
+    padding-bottom: 10px;
+    padding: 10px;
+    position: relative;
+    bottom: -10px;
+    right: -10px;
+    overflow: scroll;
+    border: 1px solid grey;
+}
+
+.productFullScreen .reviews .review {
+    padding: 10px;
+    border: 1px solid grey;
+    margin: 10px;
+}
+
+.products a {
+    text-decoration: none;
+}
+
+.productFullScreen .longDescription {
+    width: 50vh;
+    height: auto;
+    padding-bottom: 10px;
+    position: relative;
+    bottom: -10px;
+    left: -10px;
+}
+
+/* reset styles the li element */
+.productFullScreen .longDescription li {
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.product img,
+.productFullScreen img {
+    border-radius: 10px;
+    vertical-align: middle;
+}
