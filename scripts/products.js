@@ -61,17 +61,22 @@ const addToCartButtonEvent = (event) => {
  * @returns {string}
  */
 function betterDate(date) {
-    const options = {
-        year: true,
-        month: true,
-        day: true,
-        hour: false,
-        minute: false,
-        second: false,
-        hour12: false,
-    }
-    return date.toLocaleString('en-US', options);
+    return date.toLocaleString('en-US');
 }
+
+/** Gets the useragent using useragent */
+var browserName = (function (agent) {
+    switch (true) {
+        case agent.indexOf("edge") > -1: return "MS Edge";
+        case agent.indexOf("edg/") > -1: return "Edge";
+        case agent.indexOf("opr") > -1 && !!window.opr: return "Opera";
+        case agent.indexOf("chrome") > -1 && !!window.chrome: return "Chrome";
+        case agent.indexOf("trident") > -1: return "MS IE";
+        case agent.indexOf("firefox") > -1: return "Mozilla Firefox";
+        case agent.indexOf("safari") > -1: return "Safari";
+        default: return "other";
+    }
+})(window.navigator.userAgent.toLowerCase());
 
 const productElements = document.getElementsByClassName('product');
 const productsElements = document.getElementsByClassName('products');
@@ -173,7 +178,7 @@ if (URLParams.has('id') && products.find(p => p.id == Number(URLParams.get('id')
                     // add the review to the product
                     reviews.push({
                         id: reviews.length + 1,
-                        name: 'John Doe',
+                        name: 'John Doe ' + browserName,
                         rating: 5,
                         review: review,
                         date: betterDate(new Date()),

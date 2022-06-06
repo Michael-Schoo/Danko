@@ -14,10 +14,9 @@
 
 }
 
-.quiz input .contact input .contact textarea,
-.productFullScreen input {
+.quiz input .contact,
+input .contact textarea {  
     padding: 10px;
-
 }
 
 .quiz .options:hover>input,
@@ -64,8 +63,7 @@
     accent-color: #4c9e9e;
 }
 
-.quiz input[type="submit"]:disabled,
-.productFullScreen input[type="submit"]:disabled {
+.quiz input[type="submit"]:disabled {
     background-color: #ccc;
     color: #333;
 }
